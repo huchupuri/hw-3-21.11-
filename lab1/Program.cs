@@ -23,17 +23,15 @@ class Program
         do
         {
             Console.Write("Введите номер дня в году (от 1 до 365): ");
-
         }
         while (!int.TryParse(Console.ReadLine(), out dayOfYear) || dayOfYear >= 365 || dayOfYear <= 1);
-
         DateSerching(dayOfYear);
     }
 
-//    Домашнее задание 4.1 Изменить программу из упражнений 4.1 и 4.2 так, чтобы она
-//учитывала год(високосный или нет). Год вводится с экрана. (Год високосный, если он
-//делится на четыре без остатка, но если он делится на 100 без остатка, это не високосный
-//год. Однако, если он делится без остатка на 400, это високосный год.)
+    //Домашнее задание 4.1 Изменить программу из упражнений 4.1 и 4.2 так, чтобы она
+    //учитывала год(високосный или нет). Год вводится с экрана. (Год високосный, если он
+    //делится на четыре без остатка, но если он делится на 100 без остатка, это не високосный
+    //год. Однако, если он делится без остатка на 400, это високосный год.)
     static void Task3()
     {
         Console.WriteLine("дз 4.1");
@@ -41,9 +39,8 @@ class Program
         Console.Write("Введите год: ");
         while (!int.TryParse(Console.ReadLine(), out year))
         {
-            Console.WriteLine("введите число");
+            Console.WriteLine("допускается ввод только чисел");
         }
-
         Console.Write("Введите день: ");
         while (!int.TryParse(Console.ReadLine(), out dayOfLeapYear) || dayOfLeapYear >= 365 || dayOfLeapYear <= 1)
         {
@@ -58,7 +55,6 @@ class Program
     static void DateSerching(int dayOfYear)
     {
         int[] daysInMonth = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
-
 
         int month = 0;
         int dayOfMonth = dayOfYear;
