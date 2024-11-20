@@ -61,13 +61,11 @@ namespace tasks
             bool cardFlag = true;
             sbyte? card = null;
             bool formatCheck = true;
-
             while (cardFlag)
             {
                 try
                 {
-                    card = sbyte.Parse(Console.ReadLine());
-
+                    card = sbyte.Parse(Console.ReadLine())
                 }
                 catch (System.FormatException){}
                 finally
@@ -84,9 +82,7 @@ namespace tasks
                 case 13: Console.WriteLine("король"); break;
                 case 14: Console.WriteLine("туз"); break;
                 default: Console.WriteLine(card); break;
-
             }
-
         }
 
         static void Task3()
