@@ -70,7 +70,7 @@ namespace tasks
                 catch (System.FormatException){}
                 finally
                 {
-                    if (card < 14 && card > 6) cardFlag = false;
+                    if (card <= 14 && card >= 6) cardFlag = false;
                     else Console.WriteLine("номер карты больше 5 и меньше 15");
                 }
             }
