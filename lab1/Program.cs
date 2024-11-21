@@ -36,15 +36,19 @@ class Program
     {
         Console.WriteLine("дз 4.1");
         int dayOfLeapYear, year;
+        int rSide;
         Console.Write("Введите год: ");
         while (!int.TryParse(Console.ReadLine(), out year))
         {
             Console.WriteLine("допускается ввод только чисел");
         }
         Console.Write("Введите день: ");
-        while (!int.TryParse(Console.ReadLine(), out dayOfLeapYear) || dayOfLeapYear >= 365 || dayOfLeapYear <= 1)
+        bool leap = ((year % 4 == 0) && ((year % 100 != 0) || (year % 400 == 0)));
+        if (leap) rSide = 366;
+        else rSide = 365;
+        while (!int.TryParse(Console.ReadLine(), out dayOfLeapYear) || dayOfLeapYear >= rSide || dayOfLeapYear <= 1)
         {
-            Console.WriteLine("введите число от 1 до 366");
+            Console.WriteLine($"введите число от 1 до {rSide}");
         }
         DateSerching(dayOfLeapYear, year);
     }
