@@ -65,7 +65,7 @@ namespace tasks
             {
                 try
                 {
-                    card = sbyte.Parse(Console.ReadLine())
+                    card = sbyte.Parse(Console.ReadLine());
                 }
                 catch (System.FormatException){}
                 finally
